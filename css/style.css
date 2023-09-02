@@ -60,6 +60,7 @@ body::-webkit-scrollbar-thumb {
   z-index: 10;
   width: 100%;
   background: rgba(0, 0, 0, 0.4549019608);
+  transition: padding 0.3s linear 0s;
 }
 .header__container {
   display: flex;
@@ -99,6 +100,11 @@ body::-webkit-scrollbar-thumb {
     font-size: 12px;
     padding-right: 18px;
   }
+}
+
+.scroll {
+  padding: 10px 0px;
+  transition: padding 0.3s linear 0s;
 }
 
 .page {
