@@ -5,8 +5,8 @@ window.addEventListener('DOMContentLoaded', () => {
 			let offX = event.pageX - (width * 0.5)
 			let offY = event.pageY - (height * 0.5)
 	
-			const wrapper = document.querySelector('.main__decors');
-			const elements = wrapper.querySelectorAll('img')
+			// const wrapper = document.querySelector('.main__decors');
+			const elements = document.querySelectorAll('[data-mouse]')
 	
 			elements.forEach(element => {
 				const speed = element.getAttribute('data-speed');
@@ -15,14 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
 				
 				element.style.transform = `translateX(${x}px) translateY(${y}px)`
 			})
-	
-			// section.addEventListener('mouseleave', (e) => {
-			// 	elements.forEach(element => {
-			// 		element.style.transform = `translateX(0px) translateY(0px)`
-			// 	})
-			// })
 		})
-	
 	}
 	
 	paralax(document.querySelector('main'));

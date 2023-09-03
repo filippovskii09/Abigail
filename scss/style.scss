@@ -31,17 +31,17 @@ html, body {
 }
 body::-webkit-scrollbar {
 	width: 12px;               /* ширина всей полосы прокрутки */
- }
+}
  
- body::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track {
 	background: #000;        /* цвет зоны отслеживания */
- }
+}
  
- body::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
 	background-color: #000;    /* цвет бегунка */
 	border-radius:10px;       /* округлось бегунка */
 	border: 3px solid #fff;  /* отступ вокруг бегунка */
- }
+}
 .container {
 	max-width: 1038px;
 	margin: 0 auto;
@@ -60,7 +60,7 @@ body::-webkit-scrollbar {
 	z-index: 10;
 	width: 100%;
 	background: #00000074;
-	transition: padding 0.3s linear 0s;
+	transition: padding 0.5s linear 0s;
 	&__container {
 		display: flex;
 		justify-content: space-between;
@@ -105,7 +105,7 @@ body::-webkit-scrollbar {
 }
 .scroll {
 	padding: 10px 0px;
-	transition: padding 0.3s linear 0s;
+	transition: padding 0.5s linear 0s;
 }
 .page {
 	padding-top: 243px;
@@ -114,7 +114,7 @@ body::-webkit-scrollbar {
 	}
 }
 .main {
-
+	padding-bottom: 146px;
 	&__container {
 		display: flex;
 		align-items: center;
@@ -246,4 +246,92 @@ body::-webkit-scrollbar {
 	}
 }
 
+.stack {
+	max-width: 1440px;
+	margin: 0 auto;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	row-gap: 60px;
+	&__topline {
+		background: #FFF;
+		width: 1150px;
+		height: 1px;
+		@media (max-width: 768px){
+			width: 90%;
+	 	}
+	}
 
+	&__bottomline {
+		& div {
+			background: #FFF;
+			max-width: 800px;
+			height: 1px;
+			text-align: right;
+			margin-left: auto;
+			@media (max-width: 768px){
+				width: 70%;
+	 		}
+		}
+	}
+}
+ .wrap {
+	max-width: 1440px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	row-gap: 39px;
+	align-items: center;
+}
+.items-wrap {
+	position: relative;
+	display: flex;
+	overflow: hidden;
+	gap: 20px;
+	align-items: center;
+}
+.items {
+	flex-shrink: 0;
+	display: flex;
+	gap: 20px;
+	justify-content: space-around;
+	min-width: 100%;
+	align-items: center;
+}
+.marquee {
+	animation: scroll 20s linear infinite;
+}
+.item {
+	color: #FFF;
+	font-size: 30px;
+	line-height: 117.5%; /* 35.25px */
+	transition: all 0.1s ease-in-out;
+	@media (max-width: 768px){
+		font-size: 15px;
+	}
+	&:nth-child(odd) {
+		font-weight: 800;
+		opacity: 0.5;
+	}
+	&:nth-child(even) {
+		font-weight: 400;
+		padding: 13px 45px;
+		border-radius: 75.022px;
+		border: 1px solid #FFF;
+		@media (max-width: 768px){
+			padding: 7px 22px;
+		}
+	}
+}
+.reverce {
+	animation-direction: reverse;
+}
+
+@keyframes scroll {
+	from {
+	  transform: translateX(0);
+	}
+	to {
+	  transform: translateX(calc(-100% - 30px));
+	}
+ }
