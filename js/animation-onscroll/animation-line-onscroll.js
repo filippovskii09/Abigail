@@ -1,11 +1,11 @@
-const animItems = document.querySelectorAll('.anim-items')
+const animLines = document.querySelectorAll('.anim-line')
 
-if (animItems.length > 0) {
+if (animLines.length > 0) {
 	window.addEventListener('scroll', animOnScroll)
 	function animOnScroll(params) {
 
-		for(let i = 0; i < animItems.length; i++) {
-			const animItem = animItems[i];
+		for(let i = 0; i < animLines.length; i++) {
+			const animItem = animLines[i];
 			const animItemHight = animItem.offsetHeight;
 			const animItemOffset = offset(animItem).top;
 			const animStart = 4;
@@ -17,7 +17,7 @@ if (animItems.length > 0) {
 			}
 
 			if((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHight )) {
-				animItem.classList.add('_active')
+				animItem.classList.add('_active-line')
 			} else {
 				if(!animItem.classList.contains('anim-no-hide')) {
 					animItem.classList.remove('_active')

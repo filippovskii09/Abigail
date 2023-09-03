@@ -1,4 +1,3 @@
-window.addEventListener('DOMContentLoaded', () => {
 	const paralax = (section) => {
 		window.addEventListener('mousemove', (event) => {
 			let { width, height } = section.getBoundingClientRect();
@@ -19,4 +18,3 @@ window.addEventListener('DOMContentLoaded', () => {
 	}
 	
 	paralax(document.querySelector('main'));
-})

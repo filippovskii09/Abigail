@@ -387,6 +387,12 @@ body::-webkit-scrollbar-thumb {
 }
 .projects {
   padding-top: 155px;
+  padding-bottom: 237px;
+}
+@media (max-width: 768px) {
+  .projects {
+    padding-bottom: 140px;
+  }
 }
 .projects__container {
   max-width: 1090px;
@@ -496,8 +502,96 @@ body::-webkit-scrollbar-thumb {
   color: rgba(255, 255, 255, 0.5);
 }
 
+.about__container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+.about__line {
+  width: 100%;
+  background: #FBFBFB;
+  height: 3px;
+  width: 0;
+  transition: width 1s ease 0s;
+}
+.about__title {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 18px;
+}
+.about__title .anim-items:first-child {
+  color: var(--Gray-5, #E0E0E0);
+  font-size: 25px;
+  font-weight: 800;
+  line-height: 120%; /* 30px */
+  opacity: 0;
+  transition: all 1.1s ease 0s;
+}
+.about__title .anim-items:last-child {
+  color: var(--Gray-5, #E0E0E0);
+  font-size: 25px;
+  font-style: italic;
+  line-height: 120%; /* 30px */
+  opacity: 0;
+  transition: all 1.2s ease 0s;
+}
+.about__text {
+  color: #FFF;
+  font-size: 65px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 117.5%; /* 76.375px */
+  padding: 44px 0px;
+  opacity: 0;
+  transform: translateY(100px);
+  transition: all 1s linear 0.2s;
+}
+@media (max-width: 768px) {
+  .about__text {
+    font-size: 40px;
+  }
+}
+.about__action {
+  display: flex;
+  gap: 70px;
+  width: 450px;
+}
+.about__action img {
+  transition: all 0.3s ease 0s;
+}
+@media (max-width: 768px) {
+  .about__action img {
+    width: 61px;
+  }
+}
+.about__action:hover img {
+  transform: rotate(-45deg);
+}
+.about__btn {
+  margin-top: 26px;
+  color: #FFF;
+  font-size: 37.511px;
+  line-height: 117.5%; /* 44.075px */
+  padding: 23px 45px;
+  border-radius: 75.022px;
+  border: 2px solid #FFF;
+  background: #000;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .about__btn {
+    font-size: 22px;
+    padding: 13.966px 27.325px;
+  }
+}
+
+._active-line {
+  width: 100%;
+  transition: width 1.5s ease 0s;
+}
+
 ._active {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1 !important;
+  transform: translate(0);
   transition: all 1s linear 0s;
 }
