@@ -23,7 +23,6 @@
 
 html, body {
   width: 100%;
-  height: 10000px;
   background-color: #020202;
   overflow-x: hidden;
 }
@@ -577,12 +576,17 @@ body::-webkit-scrollbar-thumb {
   border: 2px solid #FFF;
   background: #000;
   cursor: pointer;
+  transition: all 0.3s linear 0s;
 }
 @media (max-width: 768px) {
   .about__btn {
     font-size: 22px;
     padding: 13.966px 27.325px;
   }
+}
+.about__btn:hover {
+  background-color: #fff;
+  color: #000;
 }
 
 ._active-line {
@@ -707,13 +711,14 @@ body::-webkit-scrollbar-thumb {
 }
 
 .works-column:hover .works-column__content {
-  bottom: 0;
   opacity: 1;
+  transform: translateY(0);
 }
 .works-column__content {
   position: absolute;
-  bottom: -100%;
+  bottom: 0;
   opacity: 0;
+  transform: translateY(100%);
   left: 0;
   border-radius: 0px 0px 35px 35px;
   background: rgba(0, 0, 0, 0.5);
@@ -722,7 +727,7 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   flex-direction: column;
   row-gap: 5px;
-  transition: all 0.4s linear 0s;
+  transition: all 0.2s linear 0s;
 }
 @media (max-width: 768px) {
   .works-column__content {
